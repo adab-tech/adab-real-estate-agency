@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Adab — Business Card</title>
+  <link rel="icon" href="../brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1B2A4A;
+      --gold: #C9A227;
+      --gray: #6b7280;
+      --cream: #f8f6f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .sheet {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+    .hint {
+      font-size: 13px;
+      color: #4b5563;
+      text-align: center;
+      max-width: 420px;
+    }
+    /* US standard 3.5 × 2 in at 96dpi ≈ 336 × 192 px */
+    .card {
+      width: 3.5in;
+      height: 2in;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(27, 42, 74, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+    .card-front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0.2in;
+      background: #fff;
+    }
+    .card-front img {
+      width: 1.6in;
+      height: auto;
+    }
+    .card-back {
+      display: flex;
+      height: 100%;
+    }
+    .card-back .accent {
+      width: 0.18in;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .card-back .content {
+      flex: 1;
+      padding: 0.22in 0.28in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.06in;
+    }
+    .name {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 700;
+      font-size: 13pt;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+    .role {
+      font-size: 8.5pt;
+      color: var(--gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.08in;
+    }
+    .line {
+      font-size: 7.5pt;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    .line strong { color: var(--navy); font-weight: 500; }
+    .tagline {
+      margin-top: 0.1in;
+      font-size: 7pt;
+      color: var(--navy);
+      font-style: italic;
+      opacity: 0.85;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .hint, .sheet > p { display: none; }
+      .card { box-shadow: none; border-radius: 0; page-break-inside: avoid; }
+      .sheet { gap: 0.25in; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <p class="hint">Print at 100% scale (no margins) · 350 GSM cardstock · Edit contact fields below before printing</p>
+
+    <!-- Front: logo -->
+    <div class="card" aria-label="Business card front">
+      <div class="card-front">
+        <img src="../brand/logo.png" alt="Adab Real Estate Agency" />
+      </div>
+    </div>
+
+    <!-- Back: contact -->
+    <div class="card" aria-label="Business card back">
+      <div class="card-back">
+        <div class="accent" aria-hidden="true"></div>
+        <div class="content">
+          <div class="name" id="agentName">Your Name</div>
+          <div class="role" id="agentRole">Property Consultant</div>
+          <div class="line"><strong>T</strong> <span id="phone">+234 XXX XXX XXXX</span></div>
+          <div class="line"><strong>E</strong> <span id="email">hello@adabrealestate.ng</span></div>
+          <div class="line"><strong>W</strong> <span id="website">adabrealestate.ng</span></div>
+          <div class="line"><strong>L</strong> Nigeria</div>
+          <div class="tagline">Trusted property solutions across Nigeria</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../brand/site-config.js"></script>
+  <script>
+    if (window.ADAB_SITE) {
+      const s = window.ADAB_SITE;
+      document.getElementById('phone').textContent = s.phone;
+      document.getElementById('email').textContent = s.email;
+      document.getElementById('website').textContent = s.website.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    }
+  </script>
+</body>
+</html>

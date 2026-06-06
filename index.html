@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adab Real Estate Agency — Brand Kit</title>
+  <meta name="description" content="Official brand assets for Adab Real Estate Agency, Nigeria." />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="design/tokens.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: var(--brand-surface);
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--adab-navy-800) 0%, var(--adab-navy-900) 100%);
+      color: #fff;
+      padding: var(--space-8) var(--space-5);
+      text-align: center;
+    }
+    .hero img {
+      max-width: min(320px, 80vw);
+      height: auto;
+      margin-bottom: var(--space-5);
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.25));
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: var(--type-3xl);
+      margin: 0 0 var(--space-2);
+      letter-spacing: 0.04em;
+    }
+    .hero p {
+      margin: 0;
+      color: rgba(255,255,255,.75);
+      font-size: var(--type-lg);
+    }
+    .badge {
+      display: inline-block;
+      margin-top: var(--space-4);
+      padding: var(--space-2) var(--space-4);
+      background: var(--adab-gold-500);
+      color: var(--adab-navy-900);
+      font-size: var(--type-sm);
+      font-weight: 600;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-5);
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-size: var(--type-2xl);
+      color: var(--brand-primary);
+      margin: 0 0 var(--space-5);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-5);
+    }
+    .card {
+      background: var(--brand-bg);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--adab-gray-300);
+    }
+    .card h3 {
+      font-family: var(--font-display);
+      margin: 0 0 var(--space-2);
+      font-size: var(--type-lg);
+    }
+    .card p {
+      margin: 0 0 var(--space-4);
+      color: var(--text-muted);
+      font-size: var(--type-sm);
+    }
+    .card a {
+      color: var(--brand-primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: var(--type-sm);
+    }
+    .card a:hover { color: var(--adab-gold-500); }
+    .swatches {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-top: var(--space-4);
+    }
+    .swatch {
+      width: 64px;
+      text-align: center;
+      font-size: var(--type-xs);
+      color: var(--text-muted);
+    }
+    .swatch span {
+      display: block;
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-1);
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    footer {
+      text-align: center;
+      padding: var(--space-6);
+      color: var(--text-muted);
+      font-size: var(--type-sm);
+      border-top: 1px solid var(--adab-gray-300);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/brand/logo.png" alt="Adab Real Estate Agency logo" width="320" height="auto" />
+    <h1>Adab Real Estate Agency</h1>
+    <p>Trusted property solutions across Nigeria</p>
+    <span class="badge">Brand Kit</span>
+  </header>
+
+  <main>
+    <section>
+      <h2>Business assets</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Business card</h3>
+          <p>Print-ready 3.5×2 in card with logo, contact fields, and brand colors.</p>
+          <a href="assets/templates/business-card.html">Open template →</a>
+        </article>
+        <article class="card">
+          <h3>Letterhead</h3>
+          <p>A4 letterhead for proposals, tenancy agreements, and client correspondence.</p>
+          <a href="assets/templates/letterhead.html">Open template →</a>
+        </article>
+        <article class="card">
+          <h3>Brand guidelines</h3>
+          <p>Logo usage, colors, typography, clear space, and print specifications.</p>
+          <a href="assets/brand/BRAND.md">View BRAND.md →</a>
+        </article>
+        <article class="card">
+          <h3>Logo files</h3>
+          <p>PNG full logo, SVG mark, and favicon for web and print vendors.</p>
+          <a href="assets/brand/">Browse assets/brand/ →</a>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top: var(--space-8);">
+      <h2>Brand colors</h2>
+      <div class="swatches">
+        <div class="swatch"><span style="background:#1B2A4A"></span>Navy</div>
+        <div class="swatch"><span style="background:#C9A227"></span>Gold</div>
+        <div class="swatch"><span style="background:#0f1a2e"></span>Ink</div>
+        <div class="swatch"><span style="background:#f8f6f1"></span>Cream</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Adab Real Estate Agency · Nigeria
+  </footer>
+
+  <script src="assets/brand/site-config.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

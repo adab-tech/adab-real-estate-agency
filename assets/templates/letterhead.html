@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Adab — Letterhead</title>
+  <link rel="icon" href="../brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1B2A4A;
+      --gold: #C9A227;
+      --gray: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: A4; margin: 0; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #d1d5db;
+      padding: 24px;
+      color: var(--navy);
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(27, 42, 74, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18mm 20mm 12mm;
+      border-bottom: 3px solid var(--gold);
+    }
+    .header img {
+      height: 22mm;
+      width: auto;
+    }
+    .contact {
+      text-align: right;
+      font-size: 9pt;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .contact strong {
+      display: block;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--navy);
+      font-size: 10pt;
+      margin-bottom: 2mm;
+    }
+    .body {
+      flex: 1;
+      padding: 20mm;
+      font-size: 11pt;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .body .placeholder {
+      color: #9ca3af;
+      font-style: italic;
+    }
+    .footer {
+      padding: 8mm 20mm 14mm;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8pt;
+      color: var(--gray);
+    }
+    .footer .mark {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.06em;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="../brand/logo.png" alt="Adab Real Estate Agency" />
+      <div class="contact">
+        <strong>Adab Real Estate Agency</strong>
+        <span id="phone">+234 XXX XXX XXXX</span><br />
+        <span id="email">hello@adabrealestate.ng</span><br />
+        Nigeria
+      </div>
+    </header>
+
+    <main class="body">
+      <p class="placeholder">[Date]</p>
+      <br />
+      <p class="placeholder">[Recipient name &amp; address]</p>
+      <br />
+      <p>Dear [Client name],</p>
+      <br />
+      <p class="placeholder">[Letter body — property listing, tenancy agreement cover letter, proposal, etc.]</p>
+      <br />
+      <p>Yours faithfully,</p>
+      <br /><br />
+      <p><strong>[Signatory name]</strong><br />Adab Real Estate Agency</p>
+    </main>
+
+    <footer class="footer">
+      <span class="mark">ADAB</span>
+      <span>Trusted property solutions across Nigeria</span>
+    </footer>
+  </div>
+
+  <script src="../brand/site-config.js"></script>
+  <script>
+    if (window.ADAB_SITE) {
+      document.getElementById('phone').textContent = window.ADAB_SITE.phone;
+      document.getElementById('email').textContent = window.ADAB_SITE.email;
+    }
+  </script>
+</body>
+</html>

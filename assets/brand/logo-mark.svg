@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Adab Real Estate Agency mark">
+  <rect width="120" height="120" fill="#ffffff"/>
+  <!-- A roof / letter A -->
+  <path fill="#1B2A4A" d="M18 92 L60 18 L102 92 Z"/>
+  <path fill="#C9A227" d="M42 68 L60 38 L78 68 Z"/>
+  <!-- Window -->
+  <rect x="52" y="72" width="16" height="16" fill="#1B2A4A" rx="1"/>
+  <line x1="60" y1="72" x2="60" y2="88" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="52" y1="80" x2="68" y2="80" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Skyline -->
+  <rect x="82" y="58" width="14" height="34" fill="#C9A227" rx="1"/>
+  <rect x="98" y="48" width="12" height="44" fill="#1B2A4A" rx="1"/>
+</svg>

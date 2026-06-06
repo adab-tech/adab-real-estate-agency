@@ -1,0 +1,49 @@
+:root {
+  /* Adab Real Estate Agency — brand palette */
+  --adab-navy-900: #0f1a2e;
+  --adab-navy-800: #1B2A4A;
+  --adab-navy-700: #243656;
+  --adab-gold-500: #C9A227;
+  --adab-gold-400: #d4b04a;
+  --adab-gray-500: #6b7280;
+  --adab-gray-300: #d1d5db;
+  --adab-paper: #ffffff;
+  --adab-cream: #f8f6f1;
+
+  /* Semantic */
+  --brand-primary: var(--adab-navy-800);
+  --brand-accent: var(--adab-gold-500);
+  --brand-bg: var(--adab-paper);
+  --brand-surface: var(--adab-cream);
+  --text-primary: var(--adab-navy-900);
+  --text-muted: var(--adab-gray-500);
+
+  /* Typography */
+  --font-display: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale */
+  --type-xs: 0.75rem;
+  --type-sm: 0.875rem;
+  --type-base: 1rem;
+  --type-lg: 1.125rem;
+  --type-xl: 1.25rem;
+  --type-2xl: 1.5rem;
+  --type-3xl: 2rem;
+  --type-4xl: 2.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+
+  /* Radius & shadow */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 24px rgba(27, 42, 74, 0.08);
+}
